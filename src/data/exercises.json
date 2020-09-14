@@ -1,0 +1,304 @@
+{
+    "exercises": [
+        {
+            "id": 1,
+            "name": "squat",
+            "type": "compound",
+            "subtype": ""
+        },
+        {
+            "id": 2,
+            "name": "deadlift",
+            "type": "compound",
+            "subtype": ""
+        },
+        {
+            "id": 3,
+            "name": "bench press",
+            "type": "compound",
+            "subtype": ""
+        },
+        {
+            "id": 4,
+            "name": "dumbbell row",
+            "type": "preferred_accessory",
+            "subtype": "upper back horizontal"
+        },
+        {
+            "id": 5,
+            "name": "barbell row",
+            "type": "preferred_accessory",
+            "subtype": "upper back horizontal"
+        },
+        {
+            "id": 6,
+            "name": "machine row",
+            "type": "preferred_accessory",
+            "subtype": "upper back horizontal"
+        },
+        {
+            "id": 7,
+            "name": "seated dumbbell OHP",
+            "type": "preferred_accessory",
+            "subtype": "shoulder"
+        },
+        {
+            "id": 8,
+            "name": "standing dumbbell OHP",
+            "type": "preferred_accessory",
+            "subtype": "shoulder"
+        },
+        {
+            "id": 9,
+            "name": "military press",
+            "type": "preferred_accessory",
+            "subtype": "shoulder"
+        },
+        {
+            "id": 10,
+            "name": "lateral dumbbell raise",
+            "type": "preferred_accessory",
+            "subtype": "shoulder"
+        },
+        {
+            "id": 11,
+            "name": "weighted pull up",
+            "type": "preferred_accessory",
+            "subtype": "upper back vertical"
+        },
+        {
+            "id": 12,
+            "name": "weighted chin up",
+            "type": "preferred_accessory",
+            "subtype": "upper back vertical"
+        },
+        {
+            "id": 13,
+            "name": "lat pulldown",
+            "type": "preferred_accessory",
+            "subtype": "upper back vertical"
+        },
+        {
+            "id": 14,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 15,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 16,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 17,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 18,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 19,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 20,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 21,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 22,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 23,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 24,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 25,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 26,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 27,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 28,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 29,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 30,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 31,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 32,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 33,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 34,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 35,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 36,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 37,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 38,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 39,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 40,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 41,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 42,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 43,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 44,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 45,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 46,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 47,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 48,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 49,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        },
+        {
+            "id": 50,
+            "name": "",
+            "type": "optional",
+            "subtype": ""
+        }
+    ]
+}

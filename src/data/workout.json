@@ -1,0 +1,41 @@
+{
+    "week_1": {
+        "monday": [
+            {
+                "exercise_id": 1,
+                "unique": "",
+                "sets": [
+                    {
+                        "order": 1,
+                        "reps": "6",
+                        "weight": "0.8*squat1RM, 2.5"
+                    },
+                    {
+                        "order": 2,
+                        "reps": "6",
+                        "weight": "0.8*squat1RM, 2.5"
+                    },
+                    {
+                        "order": 1,
+                        "reps": "6",
+                        "weight": "0.8*squat1RM, 2.5"
+                    },
+                    {
+                        "order": 2,
+                        "reps": "6",
+                        "weight": "0.8*squat1RM, 2.5"
+                    }
+                ]
+            },
+            {},
+            {},
+            {}
+        ],
+        "tuesday": {},
+        "wednesday": {},
+        "thursday": {},
+        "friday": {},
+        "saturday": {},
+        "sunday": {}
+    }
+}
