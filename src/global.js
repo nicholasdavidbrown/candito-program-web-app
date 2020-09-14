@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
+    @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+
     html, body {
         margin: 0;
         padding: 0;
@@ -23,6 +25,12 @@ export const GlobalStyles = createGlobalStyle`
         text-align: center;
         text-transform: uppercase;
     }
+
+    .jura-font {
+        font-family: 'Jura', sans-serif;
+        font-weight: 700;
+    }
+
     img {
         border-radius: 5px;
         height: auto;

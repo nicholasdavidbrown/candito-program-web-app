@@ -13,8 +13,9 @@ function App() {
       <>
         <GlobalStyles />
         <div>
-          <img src={img} alt="candito program" />
-          <h1>Candito Program</h1>
+          <img src={img} alt="candito" />
+          <h1 className='jura-font'>Candito</h1>
+          <p>6 Week Program</p>
         </div>
         <div>
           <Burger open={open} setOpen={setOpen} />
