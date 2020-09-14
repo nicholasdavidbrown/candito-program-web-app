@@ -1,22 +1,35 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
+import styled from 'styled-components';
 
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
+import img from '../../assets/candito.svg'
+
+import { StyledSignIn } from './SignIn.styled';
+
+const StyledDiv = styled.div`
+  a {
+    color: #00FFCB;
+  }
+`
+
 const SignInPage = () => (
-  <div>
-    <h1>SignIn</h1>
-    <SignInForm />
-    <SignInGoogle />
+  <StyledDiv>
+    <img src={img} style={{ maxWidth: '80px', marginBottom: '20px' }}></img>
+    <StyledSignIn>
+      <SignInForm />
+    </StyledSignIn>
+    {/* <SignInGoogle />
     <SignInFacebook />
-    <SignInTwitter />
+    <SignInTwitter /> */}
     <PasswordForgetLink />
     <SignUpLink />
-  </div>
+  </StyledDiv>
 );
 
 const INITIAL_STATE = {
@@ -68,7 +81,7 @@ class SignInFormBase extends Component {
     const isInvalid = password === '' || email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form className='login' onSubmit={this.onSubmit}>
         <input
           name="email"
           value={email}
