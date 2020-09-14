@@ -21,3 +21,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Ignore environment
+.env.development
+.env.production
+
+# Firebase files
+.firebaserc
+firebase.json
+firestore.rules
+firestore.indexes.json
+
+
