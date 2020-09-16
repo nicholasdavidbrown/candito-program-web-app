@@ -33,7 +33,7 @@ const App = () => (
             component={PasswordForgetPage}
           />
           <Route path={ROUTES.HOME} component={HomePage} />
-          <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+          <Route path={ROUTES.WORKOUT} component={AccountPage} />
           <Route path={ROUTES.ADMIN} component={AdminPage} />
         </div>
       </Router>

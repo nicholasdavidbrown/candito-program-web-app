@@ -34,6 +34,10 @@ const NavigationAuth = ({ isHidden, tabIndex, open, setOpen, ...props }) => {
                 <span aria-hidden="true">💪</span>
                 <Link to={ROUTES.HOME} onClick={() => setOpen(false)}> Home</Link>
             </a>
+            <a tabIndex={tabIndex}>
+                <span aria-hidden="true">💪</span>
+                <Link to={ROUTES.WORKOUT} onClick={() => setOpen(false)}> Workout</Link>
+            </a>
             {/* <a tabIndex={tabIndex}>
                 <span aria-hidden="true">📩</span>
                 <Link to={ROUTES.ACCOUNT} onClick={() => setOpen(false)}> Account</Link>
