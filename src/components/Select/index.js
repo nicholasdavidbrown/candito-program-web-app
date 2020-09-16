@@ -36,11 +36,9 @@ const formatGroupLabel = data => (
 );
 
 export default () => (
-    // <StyledDiv>
     <Select
         defaultValue={colourOptions[1]}
         options={groupedOptions}
         formatGroupLabel={formatGroupLabel}
     />
-    // </StyledDiv>
 );
