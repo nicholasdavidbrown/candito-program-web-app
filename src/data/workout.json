@@ -1163,7 +1163,7 @@
             },
         ],
     }
-    "week_2": {
+    "week_3": {
         "monday": [
             {
                 "exercise_id": 1,
@@ -1171,17 +1171,17 @@
                 "sets": [
                     {
                         "order": 1,
-                        "reps": "6",
+                        "reps": "4-6",
                         "weight": "(0.85*squat1RM, 2.5) +2.5"
                     },
                     {
                         "order": 2,
-                        "reps": "6",
+                        "reps": "4-6",
                         "weight": "(0.85*squat1RM, 2.5) +2.5"
                     },
                     {
                         "order": 3,
-                        "reps": "6",
+                        "reps": "4-6",
                         "weight": "(0.85*squat1RM, 2.5) +2.5"
                     },
                 ]
@@ -1282,5 +1282,109 @@
                 ]
             },
         ],
+        "thursday":[],
+        "friday": [
+            {
+                "exercise_id": 1,
+                "unique": "",
+                "sets": [
+                    {
+                        "order": 1,
+                        "reps": "4-6",
+                        "weight": "((0.85*squat1RM +2.5), 2.5) +2.5"
+                    },
+                ]
+                "exercise_id": DEADLIFT VARIATION,
+                "unique": "",
+                "sets": [
+                    {
+                        "order": 1,
+                        "reps": "8",
+                        "weight": ""
+                    },
+                ]
+            },
+        ],
+        "saturday": [
+            {
+                "exercise_id": 3,
+                "unique": "",
+                "sets": [
+                    {
+                        "order": 1,
+                        "reps": "4-6",
+                        "weight": "(0.85*bench1RM, 2.5) +2.5"
+                    },
+                    {
+                        "order": 2,
+                        "reps": "4-6",
+                        "weight": "(0.85*bench1RM, 2.5) +2.5"
+                    },
+                    {
+                        "order": 3,
+                        "reps": "4-6",
+                        "weight": "(0.85*bench1RM, 2.5) +2.5"
+                    },
+                ]
+                "exercise_id": PREFERRED ACCESSORY - UPPER BACK HORIZONTAL,
+                "unique": "",
+                "sets": [
+                    {
+                        "order": 1,
+                        "reps": "6",
+                        "weight": ""
+                    },
+                    {
+                        "order": 2,
+                        "reps": "6",
+                        "weight": ""
+                    },
+                    {
+                        "order": 3,
+                        "reps": "6",
+                        "weight": ""
+                    },
+                ]
+                "exercise_id": SHOULDER EXERCISE,
+                "unique": "",
+                "sets": [
+                    {
+                        "order": 1,
+                        "reps": "6",
+                        "weight": ""
+                    },
+                    {
+                        "order": 2,
+                        "reps": "6",
+                        "weight": ""
+                    },
+                    {
+                        "order": 3,
+                        "reps": "6",
+                        "weight": ""
+                    },
+                ]
+                "exercise_id": PREFERRED ACCESSORY - UPPER BACK VERTICAL,
+                "unique": "",
+                "sets": [
+                    {
+                        "order": 1,
+                        "reps": "6",
+                        "weight": ""
+                    },
+                    {
+                        "order": 2,
+                        "reps": "6",
+                        "weight": ""
+                    },
+                    {
+                        "order": 3,
+                        "reps": "6",
+                        "weight": ""
+                    },
+                ]
+            },
+        ],
+        "sunday":[]
     }
 }
