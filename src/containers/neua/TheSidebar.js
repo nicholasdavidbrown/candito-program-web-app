@@ -41,7 +41,7 @@ const TheSidebar = () => {
           src={logoImage}
           className="c-sidebar-brand-full"
           name="logo-negative"
-          height={40} />
+          height={25} />
         {/* <CIcon
           className="c-sidebar-brand-minimized"
           name="sygnet"

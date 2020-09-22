@@ -5,6 +5,7 @@ import './scss/style.scss';
 
 const PrivateRoute = ({ component: TheLayout, ...rest }) => {
     const { currentUser } = useContext(AuthContext);
+    console.log(currentUser)
     return (
         <Route
             {...rest}

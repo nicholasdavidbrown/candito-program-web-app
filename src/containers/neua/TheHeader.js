@@ -17,12 +17,13 @@ import CIcon from '@coreui/icons-react'
 import routes from '../../routes'
 
 import logoImage from '../../assets/icons/neua.png'
+import sygnetImage from '../../assets/icons/neua-sygnet.png'
 
 import {
   TheHeaderDropdown,
-  TheHeaderDropdownMssg,
-  TheHeaderDropdownNotif,
-  TheHeaderDropdownTasks
+  // TheHeaderDropdownMssg,
+  // TheHeaderDropdownNotif,
+  // TheHeaderDropdownTasks
 } from './index'
 
 const TheHeader = () => {
@@ -53,13 +54,14 @@ const TheHeader = () => {
         className="ml-3 d-md-down-none"
         onClick={toggleSidebar}
       />
-      <CHeaderBrand className="mx-auto d-lg-none" to="/">
+      <CHeaderBrand className="mx-auto d-lg-none ml" to="/">
         {/* <CIcon name="logo" height="48" alt="Logo" /> */}
-        <img src={logoImage} name="logo" height="40" alt="Logo" />
+        {/* <img src={sygnetImage} name="logo" height="40" alt="Logo" /> */}
+        <img src={logoImage} name="logo" height="20" alt="Logo" />
       </CHeaderBrand>
 
       <CHeaderNav className="d-md-down-none mr-auto">
-        <CHeaderNavItem className="px-3" >
+        {/* <CHeaderNavItem className="px-3" >
           <CHeaderNavLink to="/dashboard">Dashboard</CHeaderNavLink>
         </CHeaderNavItem>
         <CHeaderNavItem className="px-3">
@@ -67,11 +69,11 @@ const TheHeader = () => {
         </CHeaderNavItem>
         <CHeaderNavItem className="px-3">
           <CHeaderNavLink>Settings</CHeaderNavLink>
-        </CHeaderNavItem>
+        </CHeaderNavItem> */}
       </CHeaderNav>
 
       <CHeaderNav className="px-3">
-        <CToggler
+        {/* <CToggler
           inHeader
           className="ml-3 d-md-down-none"
           onClick={() => dispatch({ type: 'set', darkMode: !darkMode })}
@@ -79,7 +81,7 @@ const TheHeader = () => {
         >
           <CIcon name="cil-moon" className="c-d-dark-none" alt="CoreUI Icons Moon" />
           <CIcon name="cil-sun" className="c-d-default-none" alt="CoreUI Icons Sun" />
-        </CToggler>
+        </CToggler> */}
         {/* <TheHeaderDropdownNotif />
         <TheHeaderDropdownTasks />
         <TheHeaderDropdownMssg /> */}
@@ -93,9 +95,9 @@ const TheHeader = () => {
         </CToggler> */}
       </CHeaderNav>
 
-      <CSubheader className="px-3 justify-content-between">
+      {/* <CSubheader className="px-3 justify-content-between">
         <CBreadcrumbRouter className="border-0 c-subheader-nav m-0 px-0 px-md-3" routes={routes} />
-        {/* <div className="d-md-down-none mfe-2 c-subheader-nav">
+        <div className="d-md-down-none mfe-2 c-subheader-nav">
           <CLink className="c-subheader-nav-link" href="#">
             <CIcon name="cil-speech" alt="Settings" />
           </CLink>
@@ -109,8 +111,8 @@ const TheHeader = () => {
           <CLink className="c-subheader-nav-link" href="#">
             <CIcon name="cil-settings" alt="Settings" />&nbsp;Settings
             </CLink>
-        </div> */}
-      </CSubheader>
+        </div>
+      </CSubheader> */}
     </CHeader>
   )
 }

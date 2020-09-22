@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useState } from "react";
 import { withRouter, Redirect } from "react-router";
 import { Link } from 'react-router-dom'
-import app from "../../../config/fire";
+import { firebaseSignIn } from "../../../utils/firebase";
 import { AuthContext } from "../../../services/auth.service";
 import {
   CButton,
@@ -18,6 +18,8 @@ import {
   CRow
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
+import img from '../../../assets/icons/neua-sygnet.png'
+import img2 from '../../../assets/icons/neua.png'
 
 const Login = ({ history }) => {
   const [state, setState] = useState({
@@ -42,9 +44,7 @@ const Login = ({ history }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await app
-        .auth()
-        .signInWithEmailAndPassword(state.email, state.password);
+      await firebaseSignIn(state.email, state.password)
       history.push("/");
     } catch (error) {
       alert(error);
@@ -52,15 +52,17 @@ const Login = ({ history }) => {
   }
 
   return (
-    <div className="c-app c-default-layout flex-row align-items-center">
+    <div className="c-app bg-grey c-default-layout flex-row align-items-center">
       <CContainer>
         <CRow className="justify-content-center">
           <CCol md="8">
             <CCardGroup>
-              <CCard className="p-4">
+              <CCard className="p-4 bg-transparent">
                 <CCardBody>
                   <CForm>
-                    <h1>Login</h1>
+                    <img src={img}></img>
+                    <img src={img2} style={{ maxWidth: '100%', marginBottom: '20px' }}></img>
+                    {/* <h1>Login</h1> */}
                     <p className="text-muted">Sign In to your account</p>
                     <CInputGroup className="mb-3">
                       <CInputGroupPrepend>
@@ -92,22 +94,27 @@ const Login = ({ history }) => {
                         autoComplete="current-password"
                       />
                     </CInputGroup>
-                    <CRow>
-                      <CCol xs="6">
-                        <CButton
-                          color="primary"
-                          className="px-4"
-                          onClick={handleLogin}>
-                          Login
+                    {/* <CRow> */}
+                    {/* <CCol xs="6"> */}
+                    <div className='custom-color1'>
+                      <CButton
+                        color="primary"
+                        className="px-4"
+                        onClick={handleLogin}>
+                        Login
                         </CButton>
-                      </CCol>
-                      {/* <CCol xs="6" className="text-right">
+                    </div>
+                    {/* </CCol> */}
+                    {/* <CCol xs="6" className="text-right">
                         <CButton color="link" className="px-0">Forgot password?</CButton>
                       </CCol> */}
-                    </CRow>
+                    {/* </CRow> */}
                   </CForm>
                 </CCardBody>
               </CCard>
+              <Link className='center custom-color1' to="/register">
+                <CButton color="primary" className="mt-3" active tabIndex={-1}>Join Powerbuilder</CButton>
+              </Link>
               <CCard className="text-white bg-primary py-5 d-md-down-none" style={{ width: '44%' }}>
                 <CCardBody className="text-center">
                   <div>

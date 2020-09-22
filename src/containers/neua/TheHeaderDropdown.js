@@ -1,5 +1,5 @@
 import React from 'react'
-import app from "../../config/fire";
+import { firebaseSignOut } from "../../utils/firebase";
 import {
   CBadge,
   CDropdown,
@@ -15,9 +15,7 @@ const TheHeaderDropdown = ({ history }) => {
   const handleLogout = async (e) => {
     e.preventDefault();
     try {
-      await app
-        .auth()
-        .signOut();
+      await firebaseSignOut()
       // history.push("/");
     } catch (error) {
       alert(error);
@@ -33,14 +31,14 @@ const TheHeaderDropdown = ({ history }) => {
       <CDropdownToggle className="c-header-nav-link" caret={false}>
         <div className="c-avatar">
           <CImg
-            src={'avatars/6.jpg'}
+            src={'avatars/lifter.png'}
             className="c-avatar-img"
             alt="admin@bootstrapmaster.com"
           />
         </div>
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
-        <CDropdownItem
+        {/* <CDropdownItem
           header
           tag="div"
           color="light"
@@ -93,7 +91,7 @@ const TheHeaderDropdown = ({ history }) => {
           Projects
           <CBadge color="primary" className="mfs-auto">42</CBadge>
         </CDropdownItem>
-        <CDropdownItem divider />
+        <CDropdownItem divider /> */}
         <CDropdownItem onClick={handleLogout} >
           <CIcon name="cil-lock-locked" className="mfe-2" />
           Logout

@@ -23,7 +23,7 @@ const TheLayout = () => {
       <div className="c-wrapper">
         <TheHeader />
         <div className="c-body">
-          {/* <TheContent /> */}
+          <TheContent />
         </div>
         <TheFooter />
       </div>

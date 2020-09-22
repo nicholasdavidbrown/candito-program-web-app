@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { withRouter } from "react-router";
-import app from "../../../config/fire";
+import { firebaseSignUp, firebaseUser } from "../../../utils/firebase";
+import { Link } from 'react-router-dom'
 import {
   CButton,
   CCard,
@@ -34,9 +35,20 @@ const Register = ({ history }) => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await app
-        .auth()
-        .createUserWithEmailAndPassword(state.email, state.password);
+      await firebaseSignUp(state.email, state.password)
+        .then(authUser => {
+          console.log("Signing up new user", authUser.user.uid)
+          // Create a user in your Firebase realtime database
+          return firebaseUser(authUser.user.uid).set(
+            {
+              email: state.email,
+            },
+            { merge: true },
+          );
+        })
+        .catch(error => {
+          console.error(error)
+        });
       history.push("/");
     } catch (error) {
       alert(error);
@@ -44,13 +56,13 @@ const Register = ({ history }) => {
   }
 
   return (
-    <div className="c-app c-default-layout flex-row align-items-center">
+    <div className="c-app bg-grey c-default-layout flex-row align-items-center">
       <CContainer>
         <CRow className="justify-content-center">
           <CCol md="9" lg="7" xl="6">
             <CCard className="mx-4">
-              <CCardBody className="p-4">
-                <CForm>
+              <CCardBody className="p-4 bg-transparent2">
+                <CForm className='custom-color1'>
                   <h1>Register</h1>
                   <p className="text-muted">Create your account</p>
                   {/* <CInputGroup className="mb-3">
@@ -111,6 +123,10 @@ const Register = ({ history }) => {
                 </CRow>
               </CCardFooter> */}
             </CCard>
+            <Link className='center custom-color1' to="/login">
+              <p>or Sign in</p>
+              {/* <CButton color="primary" className="mt-3" active tabIndex={-1}>Sign In</CButton> */}
+            </Link>
           </CCol>
         </CRow>
       </CContainer>

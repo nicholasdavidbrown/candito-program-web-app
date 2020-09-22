@@ -11,7 +11,7 @@ import {
   cibTumblr,
   cibXing,
   cibGithub,
-  cibStackoverflow,
+  // cibStackoverflow,
   cibYoutube,
   cibDribbble,
   cibInstagram,
@@ -129,7 +129,9 @@ import {
   cilUserUnfollow,
   cilX,
   cilXCircle,
-  cilWarning
+  cilWarning,
+  cisWeightlifitng,
+  cisGraph
 } from '@coreui/icons'
 
 export const icons = Object.assign({}, {
@@ -246,7 +248,7 @@ export const icons = Object.assign({}, {
   cibTumblr,
   cibXing,
   cibGithub,
-  cibStackoverflow,
+  // cibStackoverflow,
   cibYoutube,
   cibDribbble,
   cibInstagram,
