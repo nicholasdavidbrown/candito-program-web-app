@@ -1,21 +1,11 @@
 {
-  "short_name": "Candito Program",
-  "name": "Fitness program web app",
+  "short_name": "CoreUI-React",
+  "name": "CoreUI-React sample",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "candito192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "candito512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "./assets/img/favicon.png",
+      "sizes": "100x100",
+      "type": "image/png"
     }
   ],
   "start_url": ".",

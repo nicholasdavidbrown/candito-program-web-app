@@ -1,17 +1,25 @@
+import 'react-app-polyfill/ie11'; // For IE 11 support
+import 'react-app-polyfill/stable';
+import './polyfill'
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import './index.css';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import App from './components/App';
-import Firebase, { FirebaseContext } from './components/Firebase';
+import { icons } from './assets/icons'
+
+import { Provider } from 'react-redux'
+import store from './store'
+
+React.icons = icons
 
 ReactDOM.render(
-  <FirebaseContext.Provider value={new Firebase()}>
-    <App />
-  </FirebaseContext.Provider>,
-  document.getElementById('root'),
+  <React.StrictMode>
+    <Provider store={store}>
+      <App/>
+    </Provider>
+  </React.StrictMode>, 
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
