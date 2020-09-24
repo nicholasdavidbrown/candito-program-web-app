@@ -11,29 +11,29 @@ export const AuthProvider = ({ children }) => {
         app.auth().onAuthStateChanged((user) => {
             let authUser
             if (user) {
-                // app.firestore().collection('users').doc(user.uid)
-                //     .get()
-                //     .then(snapshot => {
-                //         const dbUser = snapshot.data();
-                //         console.log(dbUser)
+                app.firestore().collection('users').doc(user.uid)
+                    .get()
+                    .then(snapshot => {
+                        const dbUser = snapshot.data();
+                        console.log(dbUser)
 
-                //         // default empty roles
-                //         // if (!dbUser.roles) {
-                //         //     dbUser.roles = {};
-                //         // }
+                        // default empty roles
+                        // if (!dbUser.roles) {
+                        //     dbUser.roles = {};
+                        // }
 
-                //         // merge auth and db user
-                //         authUser = {
-                //             uid: user.uid,
-                //             email: user.email,
-                //             emailVerified: user.emailVerified,
-                //             providerData: user.providerData,
-                //             ...dbUser,
-                //         };
+                        // merge auth and db user
+                        authUser = {
+                            uid: user.uid,
+                            email: user.email,
+                            emailVerified: user.emailVerified,
+                            providerData: user.providerData,
+                            ...dbUser,
+                        };
 
-                //         setCurrentUser(authUser)
-                //         setPending(false)
-                //     });
+                        setCurrentUser(authUser)
+                        setPending(false)
+                    });
             }
             setCurrentUser(user)
             setPending(false)

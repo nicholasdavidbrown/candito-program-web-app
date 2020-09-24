@@ -38,9 +38,10 @@ import React from 'react';
 // const ButtonGroups = React.lazy(() => import('./views/buttons/button-groups/ButtonGroups'));
 // const Buttons = React.lazy(() => import('./views/buttons/buttons/Buttons'));
 // const Charts = React.lazy(() => import('./views/charts/Charts'));
-const Dashboard = React.lazy(() => import('./views/powerbuilder/Inputs'));
-const Selections = React.lazy(() => import('./views/powerbuilder/Inputs'));
+const Dashboard = React.lazy(() => import('./views/powerbuilder/Workout'));
+const Selections = React.lazy(() => import('./views/powerbuilder/Selections'));
 const Inputs = React.lazy(() => import('./views/powerbuilder/InputForm'));
+const Progress = React.lazy(() => import('./views/powerbuilder/Charts'));
 // const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'));
 // const Flags = React.lazy(() => import('./views/icons/flags/Flags'));
 // const Brands = React.lazy(() => import('./views/icons/brands/Brands'));
@@ -58,6 +59,7 @@ const routes = [
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/selections', name: 'Selections', component: Selections },
   { path: '/inputs', name: 'Inputs', component: Inputs },
+  { path: '/progress', name: 'Progress', component: Progress },
   // { path: '/theme', name: 'Theme', component: Colors, exact: true },
   // { path: '/theme/colors', name: 'Colors', component: Colors },
   // { path: '/theme/typography', name: 'Typography', component: Typography },

@@ -30,7 +30,7 @@ const InputCard = (props) => {
             <CCol sm="6" lg="3">
                 <CWidgetDropdown
                     color={props.color}
-                    header={`${props.header} kg`}
+                    header={`${props.header}`}
                     text={`${props.text}`}
                     className={props.className}
                 >

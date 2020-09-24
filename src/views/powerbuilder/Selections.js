@@ -14,8 +14,8 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
-import InputCard from './InputCard'
-import { inputConstants } from '../../powerbuilder'
+import InputCard from './SelectionCard'
+import { inputConstants } from '../../data/powerbuilder'
 
 const Inputs = () => {
     const { input1, input2, input3, accessory1, accessory2, accessory3 } = inputConstants
@@ -30,9 +30,9 @@ const Inputs = () => {
     return (
         <>
             <CRow>
-                <InputCard color='gradient-info' header={selections.bench1rm} text={`${input1.exercise} 1RM`} className='no-pb-0' />
-                <InputCard color='gradient-info' header={selections.squat1rm} text={`${input2.exercise} 1RM`} className='no-pb-0' />
-                <InputCard color='gradient-info' header={selections.deadlift1rm} text={`${input3.exercise} 1RM`} className='no-pb-0' />
+                <InputCard color='gradient-info' header={`${selections.bench1rm} kg`} text={`${input1.exercise} 1RM`} className='no-pb-0' />
+                <InputCard color='gradient-info' header={`${selections.squat1rm} kg`} text={`${input2.exercise} 1RM`} className='no-pb-0' />
+                <InputCard color='gradient-info' header={`${selections.deadlift1rm} kg`} text={`${input3.exercise} 1RM`} className='no-pb-0' />
                 <InputCard color='gradient-primary' header={selections.accessory1} text={accessory1.type} className='no-pb-0' />
                 <InputCard color='gradient-primary' header={selections.accessory2} text={accessory2.type} className='no-pb-0' />
                 <InputCard color='gradient-primary' header={selections.accessory3} text={accessory3.type} className='no-pb-0' />
