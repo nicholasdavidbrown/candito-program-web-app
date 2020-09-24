@@ -1,6 +1,5 @@
-export default [
-    {
-        week: 1,
+export default {
+    week1: {
         monday: [
             {
                 exercise_id: 1,
@@ -601,8 +600,7 @@ export default [
         ],
         sunday: []
     },
-    {
-        week: 2,
+    week2: {
         monday: [
             {
                 exercise_id: 1,
@@ -1259,8 +1257,7 @@ export default [
             },
         ],
     },
-    {
-        week: 3,
+    week3: {
         monday: [
             {
                 exercise_id: 1,
@@ -1390,6 +1387,7 @@ export default [
         thursday: [],
         friday: [
             {
+                setOrder: 1,
                 exercise_id: 1,
                 unique: "",
                 sets: [
@@ -1401,6 +1399,7 @@ export default [
                 ]
             },
             {
+                setOrder: 2,
                 exercise_id: 'deadliftvariation',
                 unique: "",
                 sets: [
@@ -1414,6 +1413,7 @@ export default [
         ],
         saturday: [
             {
+                setOrder: 1,
                 exercise_id: 3,
                 unique: "",
                 sets: [
@@ -1435,6 +1435,7 @@ export default [
                 ]
             },
             {
+                setOrder: 2,
                 exercise_id: 'accessory1',
                 unique: "",
                 sets: [
@@ -1456,6 +1457,7 @@ export default [
                 ]
             },
             {
+                setOrder: 3,
                 exercise_id: 'accessory2',
                 unique: "",
                 sets: [
@@ -1477,6 +1479,7 @@ export default [
                 ]
             },
             {
+                setOrder: 4,
                 exercise_id: 'accessory3',
                 unique: "",
                 sets: [
@@ -1500,8 +1503,7 @@ export default [
         ],
         sunday: []
     },
-    {
-        week: 4,
+    week4: {
         monday: [
             {
                 exercise_id: 1,
@@ -1949,8 +1951,7 @@ export default [
         saturday: [],
         sunday: []
     },
-    {
-        week: 5,
+    week5: {
         monday: [
             {
                 exercise_id: 1,
@@ -2205,4 +2206,4 @@ export default [
         saturday: [],
         sunday: []
     }
-]
+}

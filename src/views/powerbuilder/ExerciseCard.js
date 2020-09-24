@@ -38,14 +38,14 @@ const InputCard = (props) => {
 
     return (
         <>
-            <CCol sm="6" lg="3">
+            <CCol xs="12" sm="6" md="6" lg="6" xl="6">
                 <CWidgetDropdown
                     color={props.color}
                     className={`${props.className}`}
                 >
                     <div className='block'>
                         <p className='block'>{`Exercise ${order}`}</p>
-                        <h1>{exercise}</h1>
+                        <h1 className='alt-h1'>{exercise}</h1>
                     </div>
                     <div>
                         <CDataTable

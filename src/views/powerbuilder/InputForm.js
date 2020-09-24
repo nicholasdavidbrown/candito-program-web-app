@@ -43,7 +43,7 @@ const BasicForms = () => {
     const [showElements, setShowElements] = React.useState(true)
     const [choices, setChoices] = React.useState({
         startDate: '',
-        bench1rm: 50,
+        bench1rm: 80,
         squat1rm: 80,
         deadlift1rm: 80,
         accessory1: 1,

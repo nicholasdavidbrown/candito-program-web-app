@@ -38,9 +38,25 @@ function setToMonday(dateString) {
     return convertDateToString(date)
 }
 
-function getNumberToMakeFirstDayOfWeek(date) {
-    const day = date.getDay()
-
+function dayNumToString(dayNum) {
+    switch (dayNum) {
+        case 0:
+            return 'sunday'
+        case 1:
+            return 'monday'
+        case 2:
+            return 'tuesday'
+        case 3:
+            return 'wednesday'
+        case 4:
+            return 'thursday'
+        case 5:
+            return 'friday'
+        case 6:
+            return 'saturday'
+        default:
+            return 'error';
+    }
 }
 
 function findCurrentWeek(currentDate, startDateString) {
@@ -54,4 +70,4 @@ function findCurrentWeek(currentDate, startDateString) {
     return parseInt((t1 - t2) / (24 * 3600 * 1000 * 7) + 1);
 }
 
-export { convertDateToString, setToMonday, findCurrentWeek }
+export { convertDateToString, setToMonday, dayNumToString, findCurrentWeek }

@@ -27,7 +27,7 @@ const WidgetsBrand = lazy(() => import('../widgets/WidgetsBrand.js'))
 const InputCard = (props) => {
     return (
         <>
-            <CCol sm="6" lg="3">
+            <CCol xs="12" sm="4" md="4" lg="4" xl="3">
                 <CWidgetDropdown
                     color={props.color}
                     header={`${props.header}`}

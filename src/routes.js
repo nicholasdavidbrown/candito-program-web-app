@@ -41,7 +41,7 @@ import React from 'react';
 const Dashboard = React.lazy(() => import('./views/powerbuilder/Workout'));
 const Selections = React.lazy(() => import('./views/powerbuilder/Selections'));
 const Inputs = React.lazy(() => import('./views/powerbuilder/InputForm'));
-const Progress = React.lazy(() => import('./views/powerbuilder/Charts'));
+const Progress = React.lazy(() => import('./views/powerbuilder/Progress'));
 // const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'));
 // const Flags = React.lazy(() => import('./views/icons/flags/Flags'));
 // const Brands = React.lazy(() => import('./views/icons/brands/Brands'));

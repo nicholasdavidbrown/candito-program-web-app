@@ -7,10 +7,13 @@ const TheFooter = () => {
       {/* <div>
         <a href="https://neua.com.au" target="_blank" rel="noopener noreferrer">Nick Brown</a>
         <span className="ml-1">&copy; 2020.</span>
+      </div> */}
+      <div className="mfs-auto grey">
+        <span className="mr-1">Created by</span>
+        <a target="_blank" rel="noopener noreferrer">Nick Brown and Thomas Bradford</a>
       </div>
-      <div className="mfs-auto">
-        <span className="mr-1">Powered by</span>
-        <a href="https://coreui.io/react" target="_blank" rel="noopener noreferrer">CoreUI for React</a>
+      {/* <div>
+        <p>Created by Nick B and Tommy B</p>
       </div> */}
     </CFooter>
   )

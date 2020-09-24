@@ -58,4 +58,14 @@
 .block {
     display: block;
     margin: auto;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.alt-h1 {
+    font-size: 22px;
+}
+
+.grey {
+    color: rgb(83, 83, 83);
 }
