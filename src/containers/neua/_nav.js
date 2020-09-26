@@ -1,7 +1,44 @@
 export default [
   {
     _tag: 'CSidebarNavTitle',
-    _children: ['Candito 6 Week']
+    _children: ['Current Routine']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Selections',
+    to: '/selections',
+    icon: 'cil-task',
+    badge: {
+      color: 'info',
+    }
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Today',
+    to: '/dashboard',
+    icon: 'cil-sun',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Forecast',
+    to: '/forecast',
+    icon: 'cil-moon',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'My Weights',
+    to: '/weights',
+    icon: 'cil-notes',
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Progress',
+    to: '/progress',
+    icon: 'cil-chart-pie',
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['New Routine']
   },
   {
     _tag: 'CSidebarNavItem',
@@ -11,27 +48,6 @@ export default [
     badge: {
       color: 'info',
     }
-  },
-  {
-    _tag: 'CSidebarNavItem',
-    name: 'Selections',
-    to: '/selections',
-    icon: 'cil-pencil',
-    badge: {
-      color: 'info',
-    }
-  },
-  {
-    _tag: 'CSidebarNavItem',
-    name: 'My Workout',
-    to: '/dashboard',
-    icon: 'cil-pencil',
-  },
-  {
-    _tag: 'CSidebarNavItem',
-    name: 'Progress',
-    to: '/progress',
-    icon: 'cil-pencil',
   },
 ]
 

@@ -43,7 +43,6 @@ function getExerciseFromId(exercise_id, userObject) {
         console.log('cool')
         return { name: 'nice', weight: 20 }
     }
-
 }
 
 export { getExerciseFromId }

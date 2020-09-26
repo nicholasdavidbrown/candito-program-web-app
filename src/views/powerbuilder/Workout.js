@@ -35,7 +35,7 @@ const Workout = () => {
     // Find current date and work out what week/day of routine it is
     console.log(currentUser)
     const { startDate } = currentUser
-    const today = new Date('2020-09-25')
+    const today = new Date()
 
     let week = findCurrentWeek(today, startDate)
     const weekRef = `week${week}`
@@ -65,15 +65,17 @@ const Workout = () => {
         for (let index = 0; index < currentRoutineDay.length; index++) {
             const element = currentRoutineDay[index];
             const { exercise_id, sets, unique, setOrder } = element
+            console.log(exercise_id)
             info = getExerciseFromId(exercise_id, currentUser)
             sets.forEach(element2 => {
                 const { order, reps, weight } = element2
                 const id = order
-                const set = order + 1
+                const set = order
                 let weightNum
                 if (weight === 0) {
                     weightNum = 'Max'
                 } else {
+                    console.log(info.weight)
                     weightNum = `${2.5 * Math.ceil((info.weight * weight) / 2.5)} kg`
                 }
                 const setObject = { id, set, reps, weight: weightNum }
