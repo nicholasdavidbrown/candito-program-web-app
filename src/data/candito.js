@@ -1506,6 +1506,7 @@ export default {
     week4: {
         monday: [
             {
+                setOrder: 1,
                 exercise_id: 1,
                 unique: "",
                 sets: [
@@ -1527,44 +1528,47 @@ export default {
                 ]
             },
             {
+                setOrder: 2,
                 exercise_id: 'deadliftvariation',
                 unique: "",
                 sets: [
                     {
                         order: 1,
                         reps: 6,
-                        weight: 0
+                        weight: 85 / 100
                     },
                     {
                         order: 2,
                         reps: 6,
-                        weight: 0
+                        weight: 85 / 100
                     },
                 ]
             },
             {
-                exercise_id: 'optional-upper',
+                setOrder: 3,
+                exercise_id: 'optional-upper3',
                 unique: "",
                 sets: [
                     {
                         order: 1,
-                        reps: "8-12",
+                        reps: 8,
                         weight: 0
                     },
                     {
                         order: 2,
-                        reps: "8-12",
+                        reps: 8,
                         weight: 0
                     },
                     {
                         order: 3,
-                        reps: "8-12",
+                        reps: 8,
                         weight: 0
                     },
                 ]
             },
             {
-                exercise_id: 'optional-upper',
+                setOrder: 4,
+                exercise_id: 'optional-upper4',
                 unique: "",
                 sets: [
                     {

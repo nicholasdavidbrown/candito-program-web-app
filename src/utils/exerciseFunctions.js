@@ -13,6 +13,14 @@ function titleCase(str) {
     return splitStr.join(' ');
 }
 
+function findExerciseById(exerciseList, exercise_id) {
+    for (var i = 0; i < exerciseList.length; i++) {
+        if (exerciseList[i].id === exercise_id) {
+            return exerciseList[i];
+        }
+    }
+}
+
 function getExerciseFromId(exercise_id, userObject) {
 
     let name
@@ -33,15 +41,24 @@ function getExerciseFromId(exercise_id, userObject) {
                 ref = 'deadlift1rm'
                 break;
             default:
-                break;
+                return { name: 'Error', weight: 0 }
         }
         weight = userObject[ref]
         return { name, weight }
     } else if (exercise_id === 'deadliftvariation') {
-        return { name: 'Deadlift Variation', weight: 0 }
+        // TODO: Find the users deadlift variation exercise
+        return { name: 'Deadlift Variation', weight: userObject['deadlift1rm'] }
+    } else if (exercise_id === 'optional-upper3') {
+        const ex_id = userObject['optionalUpper3']
+        const chosen = findExerciseById(optional, ex_id)
+        return { name: titleCase(chosen.name), weight: 0 }
+    } else if (exercise_id === 'optional-upper4') {
+        const ex_id = userObject['optionalUpper4']
+        const chosen = findExerciseById(optional, ex_id)
+        return { name: titleCase(chosen.name), weight: 0 }
     } else {
         console.log('cool')
-        return { name: 'nice', weight: 20 }
+        return { name: 'Not yet added', weight: '0' }
     }
 }
 

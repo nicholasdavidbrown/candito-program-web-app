@@ -1,5 +1,8 @@
 import React, { useContext } from 'react'
 import {
+    Link
+} from 'react-router-dom'
+import {
     CButton,
     CCard,
     CCardBody,
@@ -51,8 +54,8 @@ const BasicForms = () => {
         accessory3: 1,
         optionalUpper1: 1,
         optionalUpper2: 1,
-        optionalCore1: 1,
-        optionalCore2: 1,
+        optionalUpper3: 20,
+        optionalUpper4: 35,
         optionalLower1: 1,
         optionalLower2: 1,
     })
@@ -136,7 +139,7 @@ const BasicForms = () => {
                         </CCardBody>
                     </CCard>
                 </CCol>
-                <CCol xs="12" md="6">
+                {/* <CCol xs="12" md="6">
                     <CCard>
                         <CCardHeader>
                             Accessory Exercises
@@ -279,7 +282,7 @@ const BasicForms = () => {
                             </CFormGroup>
                         </CCardBody>
                     </CCard>
-                </CCol>
+                </CCol> */}
                 <CCol xs="12" md="6">
                     <CCard>
                         <CCardHeader>
@@ -305,7 +308,9 @@ const BasicForms = () => {
                         </CCardBody>
                         <CCardFooter>
                             {/* <CForm action="" method="post" encType="multipart/form-data" className="form-horizontal"> */}
-                            <CButton type="submit" onClick={submitData} color="primary"><CIcon name="cil-scrubber" /> Submit and Start Routine!</CButton>
+                            <Link to="/dashboard">
+                                <CButton type="submit" onClick={submitData} color="primary"><CIcon name="cil-scrubber" /> Submit and Start Routine!</CButton>
+                            </Link>
                             {/* </CForm> */}
                         </CCardFooter>
                     </CCard>

@@ -42,6 +42,8 @@ const Dashboard = React.lazy(() => import('./views/powerbuilder/Workout'));
 const Selections = React.lazy(() => import('./views/powerbuilder/Selections'));
 const Inputs = React.lazy(() => import('./views/powerbuilder/InputForm'));
 const Progress = React.lazy(() => import('./views/powerbuilder/Progress'));
+const MyWeights = React.lazy(() => import('./views/powerbuilder/MyWeights'));
+const Forecast = React.lazy(() => import('./views/powerbuilder/MyWeights'));
 // const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'));
 // const Flags = React.lazy(() => import('./views/icons/flags/Flags'));
 // const Brands = React.lazy(() => import('./views/icons/brands/Brands'));
@@ -60,6 +62,8 @@ const routes = [
   { path: '/selections', name: 'Selections', component: Selections },
   { path: '/inputs', name: 'Inputs', component: Inputs },
   { path: '/progress', name: 'Progress', component: Progress },
+  { path: '/weights', name: 'Weights', component: MyWeights },
+  { path: '/forecast', name: 'Forecast', component: MyWeights },
   // { path: '/theme', name: 'Theme', component: Colors, exact: true },
   // { path: '/theme/colors', name: 'Colors', component: Colors },
   // { path: '/theme/typography', name: 'Typography', component: Typography },
