@@ -58,7 +58,7 @@ const Forecast = React.lazy(() => import('./views/powerbuilder/MyWeights'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: '/dashboard', name: 'Dashboard', component: Dashboard },
+  { path: '/dashboard', name: 'Dashboard', component: MyWeights },
   { path: '/selections', name: 'Selections', component: Selections },
   { path: '/inputs', name: 'Inputs', component: Inputs },
   { path: '/progress', name: 'Progress', component: Progress },

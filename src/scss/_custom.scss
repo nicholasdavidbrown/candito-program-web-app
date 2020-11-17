@@ -4,6 +4,10 @@
     img { margin-left: 12px; }
 }
 
+.no-bot-padding {
+    padding-bottom: 0px;
+}
+
 .bg-grey {
     background-color: #222F;
 }
@@ -13,12 +17,12 @@
 }
 
 .bg-transparent {
-    background-color: rgba(0,0,0,0.2) !important;
+    background-color: rgba(172, 137, 137, 0.2) !important;
     text-align: center;
 }
 
 .bg-transparent2 {
-    background-color: rgba(0,0,0,0.8) !important;
+    background-color: rgba(0,0,0,0.4) !important;
     text-align: center;
 }
 

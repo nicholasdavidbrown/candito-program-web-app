@@ -1,14 +1,5 @@
 {
   "projects": {
-    "default": "candito-web-app"
-  },
-  "targets": {
-    "candito-web-app": {
-      "hosting": {
-        "powerbuilder": [
-          "build"
-        ]
-      }
-    }
+    "default": "powerbuilder-app-23043"
   }
 }

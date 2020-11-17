@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import app from "../config/fire";
+import Loader from '../components/Loader/index'
 
 export const AuthContext = React.createContext();
 
@@ -41,7 +42,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     if (pending) {
-        return <>Loading...</>
+        return <Loader />
     }
 
     return (

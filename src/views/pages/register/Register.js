@@ -59,7 +59,7 @@ const Register = ({ history }) => {
     <div className="c-app bg-grey c-default-layout flex-row align-items-center">
       <CContainer>
         <CRow className="justify-content-center">
-          <CCol md="9" lg="7" xl="6">
+          <CCol xs='12' sm='8' md="8" lg="6" xl="4">
             <CCard className="mx-4">
               <CCardBody className="p-4 bg-transparent2">
                 <CForm className='custom-color1'>
@@ -124,7 +124,7 @@ const Register = ({ history }) => {
               </CCardFooter> */}
             </CCard>
             <Link className='center custom-color1' to="/login">
-              <p>or Sign in</p>
+              <p>Sign in</p>
               {/* <CButton color="primary" className="mt-3" active tabIndex={-1}>Sign In</CButton> */}
             </Link>
           </CCol>

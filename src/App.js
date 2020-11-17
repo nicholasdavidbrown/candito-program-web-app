@@ -4,11 +4,10 @@ import PrivateRoute from "./PrivateRoute";
 import './scss/style.scss';
 
 import { AuthProvider } from './services/auth.service'
+import Loader from './components/Loader'
 
 const loading = (
-  <div className="pt-3 text-center">
-    <div className="sk-spinner sk-spinner-pulse"></div>
-  </div>
+  <Loader />
 )
 
 // Containers

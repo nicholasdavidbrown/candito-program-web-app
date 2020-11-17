@@ -6,6 +6,7 @@ import app from "../config/fire";
 
 const auth = app.auth()
 const db = app.firestore()
+
 const userCollection = db.collection('users');
 
 const firebaseSignUp = async (email, password) => {
@@ -19,7 +20,7 @@ const firebaseSignOut = () => auth.signOut();
 
 const firebaseUser = uid => userCollection.doc(uid);
 
-export { firebaseSignUp, firebaseSignIn, firebaseSignOut, firebaseUser }
+export { db, firebaseSignUp, firebaseSignIn, firebaseSignOut, firebaseUser }
 
 // class Firebase {
 //     constructor() {

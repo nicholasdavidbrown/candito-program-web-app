@@ -1,6 +1,7 @@
 import React, { useCallback, useContext, useState } from "react";
 import { withRouter, Redirect } from "react-router";
 import { Link } from 'react-router-dom'
+
 import { firebaseSignIn } from "../../../utils/firebase";
 import { AuthContext } from "../../../services/auth.service";
 import {
@@ -19,6 +20,7 @@ import {
   CRow
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
+
 import img from '../../../assets/icons/neua-sygnet.png'
 import img2 from '../../../assets/icons/neua.png'
 
@@ -53,18 +55,18 @@ const Login = ({ history }) => {
   }
 
   return (
-    <div className="c-app bg-grey c-default-layout flex-row align-items-center">
+    <div className="c-app bg-blue c-default-layout flex-row align-items-center">
       <CContainer>
         <CRow className="justify-content-center">
-          <CCol md="4">
+          <CCol xs="12" sm="8" md="6" lg="6" xl="4">
             <CCardGroup>
-              <CCard className="p-4 bg-transparent">
-                <CCardBody>
+              <CCard className="p-4 bg-transparent2 center">
+                <CCardBody className="no-bot-padding">
                   <CForm>
                     <img src={img}></img>
                     <img src={img2} style={{ maxWidth: '100%', marginBottom: '20px' }}></img>
-                    {/* <h1>Login</h1> */}
-                    <p className="text-muted">Sign In to your account</p>
+                    <p className="text-white">Sign In to your account</p>
+                    {/* Username field */}
                     <CInputGroup className="mb-3">
                       <CInputGroupPrepend>
                         <CInputGroupText>
@@ -80,6 +82,7 @@ const Login = ({ history }) => {
                         autoComplete="email"
                       />
                     </CInputGroup>
+                    {/* Password field */}
                     <CInputGroup className="mb-4">
                       <CInputGroupPrepend>
                         <CInputGroupText>
@@ -95,21 +98,19 @@ const Login = ({ history }) => {
                         autoComplete="current-password"
                       />
                     </CInputGroup>
-                    {/* <CRow> */}
-                    {/* <CCol xs="6"> */}
-                    <div className='custom-color1'>
-                      <CButton
-                        color="primary"
-                        className="px-4"
-                        onClick={handleLogin}>
-                        Login
+                    {/* Forgot Password field */}
+                    {/* <CButton color="link" className="px-0">Forgot password?</CButton> */}
+                    {/* Forgot Password field */}
+                    <CCol xs="12">
+                      <div className='custom-color1'>
+                        <CButton
+                          color="primary"
+                          className="px-4"
+                          onClick={handleLogin}>
+                          Login
                         </CButton>
-                    </div>
-                    {/* </CCol> */}
-                    {/* <CCol xs="6" className="text-right">
-                        <CButton color="link" className="px-0">Forgot password?</CButton>
-                      </CCol> */}
-                    {/* </CRow> */}
+                      </div>
+                    </CCol>
                   </CForm>
                 </CCardBody>
                 <CCardFooter className="invis-bg">
@@ -118,16 +119,6 @@ const Login = ({ history }) => {
                   </Link>
                 </CCardFooter>
               </CCard>
-              {/* <CCard className="text-white bg-primary py-5 d-md-down-none" style={{ width: '44%' }}>
-                <CCardBody className="text-center">
-                  <div>
-                    <h2>Start your journey</h2>
-                    <Link className='center custom-color1' to="/register">
-                      <CButton color="primary" className="mt-3" active tabIndex={-1}>Join Powerbuilder</CButton>
-                    </Link>
-                  </div>
-                </CCardBody>
-              </CCard> */}
             </CCardGroup>
           </CCol>
         </CRow>

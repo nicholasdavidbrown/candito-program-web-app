@@ -14,13 +14,13 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
-const ErrorCard = () => {
+const ErrorCard = (props) => {
     return (
         <>
             <CCol xs="12" sm="6" md="4">
                 <CCard color="success" className="center text-white">
                     <CCardBody>
-                        <h1>Coming Soon!</h1>
+                        <h1>{props.text}</h1>
                         Get keen for updates
             </CCardBody>
                 </CCard>
