@@ -15,18 +15,18 @@ admin.initializeApp({
 });
 
 // CORS options (applied to express app) IF REQUIRED
-const corsOptions = {
-    origin: functions.config().cors.origin,
-}
-app.use(cors(corsOptions))
-app.use(bodyParser.json({ limit: '50mb' }))
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
+// const corsOptions = {
+//     origin: functions.config().cors.origin,
+// }
+// app.use(cors(corsOptions))
+// app.use(bodyParser.json({ limit: '50mb' }))
+// app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
 
 // Exposing unique server functions
 // exports.name = require('./api/file').name
 
 // App functions
-app.use('/api/db', require('./api/db/default'))
+app.use('/api/db', require('./api/firestore/router'))
 
 app.get('/api/hello_world', (req, res) => {
     console.log('Hello World!')

@@ -1,0 +1,16 @@
+### A Test file
+
+@functionsUrl = https://australia-southeast1-powerbuilder-app-23043.cloudfunctions.net/app
+
+###
+
+GET {{functionsUrl}}/api/hello_world
+
+###
+# @name AddDefaultExercises
+# Adds the exercises from the exercises.json files stored on the server
+# Only used to initialise the database or for recovery
+# GET {{functionsUrl}}/api/db/add_default_exercises
+# Authorization: Basic admin:PowerbuilderNT9698
+###
+

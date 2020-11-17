@@ -50,7 +50,8 @@ const Login = ({ history }) => {
       await firebaseSignIn(state.email, state.password)
       history.push("/");
     } catch (error) {
-      alert(error);
+      console.error(error)
+      alert('Login failed: credentials supplied ar incorrect');
     }
   }
 

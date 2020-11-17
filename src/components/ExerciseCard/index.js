@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useContext, useState, lazy } from 'react'
+import { useHistory } from "react-router-dom";
+import styled from 'styled-components'
 import {
+    CButton,
     CBadge,
     CCard,
     CCardBody,
@@ -14,11 +17,25 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
-import { capitalize } from '../../utils/strings'
+import { capitalize, urlize } from '../../utils/strings'
+
+const StyledCard = styled.div`
+    .nextto {
+        display: inline-block;
+    }
+`
 
 const ExerciseCard = (props) => {
+    const history = useHistory()
     const [collapsed, setCollapsed] = React.useState(true)
     const [showCard, setShowCard] = React.useState(true)
+
+    const navigateToExercise = () => {
+        history.push({
+            pathname: `/users/${urlize(props.text)}`,
+            state: { exercisesList: props.exercisesList }
+        })
+    }
 
     return (
         <>
@@ -41,7 +58,10 @@ const ExerciseCard = (props) => {
                         </CCardHeader>
                         <CCollapse show={collapsed}>
                             <CCardBody>
-                                Workout
+                                <StyledCard>
+                                    <p className='nextto'>Workout</p>
+                                    <CButton className='nextto' block color="primary" onClick={() => navigateToExercise()}>View</CButton>
+                                </StyledCard>
                             </CCardBody>
                         </CCollapse>
                     </CCard>
@@ -50,5 +70,11 @@ const ExerciseCard = (props) => {
         </>
     )
 }
+
+// xs ?: columnProps;
+// sm ?: columnProps;
+// md ?: columnProps;
+// lg ?: columnProps;
+// xl ?: columnProps;
 
 export default ExerciseCard

@@ -15,13 +15,20 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
+import { AuthContext } from "../../services/auth.service";
+
 import ExerciseCard from '../../components/ExerciseCard'
+import ExerciseSearchCard from '../../components/ExerciseSearchCard'
 
 const { fetchAllExercises } = require('../../api/firebase/exercises')
+const { filterObjectByName } = require('../../utils/search')
 
 const Workout = () => {
+    const { currentUser } = useContext(AuthContext);
+    const { exerciseLog } = currentUser
     const [loading, setLoading] = useState(true);
     const [exercisesList, setExercisesList] = useState([]);
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -32,21 +39,38 @@ const Workout = () => {
                 setExercisesList(response);
                 setLoading(false);
             } catch (err) {
+                console.log('Error logging from fetchAllExercises')
                 console.error(err);
             }
         };
         fetchData();
     }, []);
 
+    const updateSearch = (value) => {
+        setSearch(value)
+    }
+
+    const renderExercises = () => {
+        if (search !== '') {
+            const filteredList = filterObjectByName(exercisesList, search)
+            return filteredList.map((element, index) => {
+                return <ExerciseCard exercisesList={exercisesList} text={element.name} key={index} />
+            })
+        } else {
+            return exercisesList.map((element, index) => {
+                return <ExerciseCard exercisesList={exercisesList} text={element.name} key={index} />
+            })
+        }
+    }
+
     return (
         <>
             <CRow>
+                <ExerciseSearchCard searchValue={search} updateSearch={updateSearch} />
                 {(loading || exercisesList === []) ? (
                     null
                 ) : (
-                        exercisesList.map((element, index) => {
-                            return <ExerciseCard text={element.name} key={index} />
-                        })
+                        renderExercises()
                     )}
             </CRow>
         </>

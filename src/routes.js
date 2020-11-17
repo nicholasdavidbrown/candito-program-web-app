@@ -43,7 +43,8 @@ const Selections = React.lazy(() => import('./views/powerbuilder/Selections'));
 const Inputs = React.lazy(() => import('./views/powerbuilder/InputForm'));
 const Progress = React.lazy(() => import('./views/powerbuilder/Progress'));
 const MyWeights = React.lazy(() => import('./views/powerbuilder/MyWeights'));
-const Forecast = React.lazy(() => import('./views/powerbuilder/MyWeights'));
+const WeightLog = React.lazy(() => import('./views/powerbuilder/WeightLog'));
+// const Forecast = React.lazy(() => import('./views/powerbuilder/MyWeights'));
 // const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'));
 // const Flags = React.lazy(() => import('./views/icons/flags/Flags'));
 // const Brands = React.lazy(() => import('./views/icons/brands/Brands'));
@@ -54,7 +55,7 @@ const Forecast = React.lazy(() => import('./views/powerbuilder/MyWeights'));
 // const Typography = React.lazy(() => import('./views/theme/typography/Typography'));
 // const Widgets = React.lazy(() => import('./views/widgets/Widgets'));
 // const Users = React.lazy(() => import('./views/users/Users'));
-// const User = React.lazy(() => import('./views/users/User'));
+const User = React.lazy(() => import('./views/users/User'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -63,7 +64,8 @@ const routes = [
   { path: '/inputs', name: 'Inputs', component: Inputs },
   { path: '/progress', name: 'Progress', component: Progress },
   { path: '/weights', name: 'Weights', component: MyWeights },
-  { path: '/forecast', name: 'Forecast', component: MyWeights },
+  // { path: '/forecast', name: 'Forecast', component: MyWeights },
+  { path: '/users/:id', exact: true, name: 'Weight Log', component: WeightLog }
   // { path: '/theme', name: 'Theme', component: Colors, exact: true },
   // { path: '/theme/colors', name: 'Colors', component: Colors },
   // { path: '/theme/typography', name: 'Typography', component: Typography },
@@ -116,8 +118,8 @@ const routes = [
   // { path: '/apps', name: 'Apps', component: Invoice, exact: true },
   // { path: '/apps/invoicing', name: 'Invoice', component: Invoice, exact: true },
   // { path: '/apps/invoicing/invoice', name: 'Invoice', component: Invoice },
-  // { path: '/users', exact: true,  name: 'Users', component: Users },
-  // { path: '/users/:id', exact: true, name: 'User Details', component: User }
+  // { path: '/users', exact: true, name: 'Users', component: Users },
+  // { path: '/users/:id', exact: true, name: 'Weight Log', component: User }
 ];
 
 export default routes;

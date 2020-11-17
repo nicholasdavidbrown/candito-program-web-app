@@ -5,7 +5,7 @@ export default [
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'My Weights',
+    name: 'Weights Log',
     to: '/weights',
     icon: 'cil-notes',
     badge: {

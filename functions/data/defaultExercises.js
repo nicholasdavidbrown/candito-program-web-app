@@ -176,4 +176,4 @@ const exercises = [
     }
 ]
 
-export { exercises }
+module.exports = exercises
