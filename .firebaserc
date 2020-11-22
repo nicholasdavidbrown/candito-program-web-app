@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "powerbuilder-app-23043"
+    "default": "powerbuilder-app-dev",
+    "powerbuilder-app-development": "powerbuilder-app-dev",
+    "powerbuilder-app-production": "powerbuilder-app-23043"
   }
 }
