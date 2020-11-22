@@ -2,6 +2,7 @@ const admin = require('firebase-admin');
 const firestore = admin.firestore();
 
 // const exercisesCollection = firestore.collection('exercises')
+const { urlize } = require('../../utils/strings')
 
 /**
  * Generic Function: batchWriteArrayToFirestoreCollection
@@ -11,7 +12,8 @@ const firestore = admin.firestore();
 function batchWriteArrayToFirestoreCollection(array, collection) {
     const batch = firestore.batch()
     array.forEach((doc) => {
-        var docRef = firestore.collection(collection).doc();
+        const docId = urlize(doc.name)
+        var docRef = firestore.collection(collection).doc(docId);
         batch.set(docRef, doc);
     });
     batch.commit()

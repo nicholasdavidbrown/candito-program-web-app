@@ -20,6 +20,8 @@ import { AuthContext } from "../../services/auth.service";
 import ExerciseCard from '../../components/ExerciseCard'
 import ExerciseSearchCard from '../../components/ExerciseSearchCard'
 
+import Cards from '../base/cards/Cards'
+
 const { fetchAllExercises } = require('../../api/firebase/exercises')
 const { filterObjectByName } = require('../../utils/search')
 
@@ -54,11 +56,11 @@ const Workout = () => {
         if (search !== '') {
             const filteredList = filterObjectByName(exercisesList, search)
             return filteredList.map((element, index) => {
-                return <ExerciseCard exercisesList={exercisesList} text={element.name} key={index} />
+                return <ExerciseCard searchTerm={search} exercisesList={exercisesList} text={element.name} key={index} />
             })
         } else {
             return exercisesList.map((element, index) => {
-                return <ExerciseCard exercisesList={exercisesList} text={element.name} key={index} />
+                return <ExerciseCard searchTerm={search} exercisesList={exercisesList} text={element.name} key={index} />
             })
         }
     }
@@ -72,6 +74,7 @@ const Workout = () => {
                 ) : (
                         renderExercises()
                     )}
+                {/* <Cards /> */}
             </CRow>
         </>
     )

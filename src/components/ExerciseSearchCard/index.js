@@ -47,11 +47,11 @@ const ExerciseSearchCard = ({ updateSearch, searchValue }) => {
             {/* <CRow> */}
             <CCol xs="12" sm="12" md="12" lg="12" xl="12">
                 <CCard>
-                    <CCardHeader>
+                    {/* <CCardHeader>
                         Search Exercises by Name
-                        </CCardHeader>
+                        </CCardHeader> */}
                     <CCardBody>
-                        <CFormGroup row>
+                        <CFormGroup className="margin-bot-0" row>
                             {/* <CCol xs="12" sm="12" md="12" lg="12" xl="12">
                                     <CLabel htmlFor="text-input">Bench Press 1RM</CLabel>
                                 </CCol> */}
@@ -59,12 +59,17 @@ const ExerciseSearchCard = ({ updateSearch, searchValue }) => {
                                 <CInput
                                     name="search"
                                     id="text-search"
-                                    placeholder="Search"
+                                    placeholder="Search Exercises"
                                     value={searchValue}
                                     onChange={handleChange}
                                 />
                                 {/* <CFormText>Ensure this is tested for best results (kg)</CFormText> */}
                             </CCol>
+                            {/* <CCol xs="12" sm="3" md="3" lg="3" xl="3">
+                                <CButton block color="primary" >
+                                    Add an Exercise
+                                </CButton>
+                            </CCol> */}
                         </CFormGroup>
                     </CCardBody>
                 </CCard>

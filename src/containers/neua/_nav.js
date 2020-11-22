@@ -12,6 +12,16 @@ export default [
       color: 'info',
       text: 'New'
     }
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Add Exercise',
+    to: '/addex',
+    icon: 'cil-notes',
+    badge: {
+      color: 'info',
+      text: 'New'
+    }
   }
   // {
   //   _tag: 'CSidebarNavItem',

@@ -1,6 +1,7 @@
 import React, { useContext, useState, lazy } from 'react'
-import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom"
 import styled from 'styled-components'
+import Highlighter from "react-highlight-words"
 import {
     CButton,
     CBadge,
@@ -17,7 +18,8 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
-import { capitalize, urlize } from '../../utils/strings'
+import { capitalize, urlize, boldString } from '../../utils/strings'
+import { AuthContext } from "../../services/auth.service";
 
 const StyledCard = styled.div`
     .nextto {
@@ -27,8 +29,12 @@ const StyledCard = styled.div`
 
 const ExerciseCard = (props) => {
     const history = useHistory()
-    const [collapsed, setCollapsed] = React.useState(true)
+    const { currentUser } = useContext(AuthContext);
+    const [collapsed, setCollapsed] = React.useState(false)
     const [showCard, setShowCard] = React.useState(true)
+
+    let currentWeight = 'Default'
+    if (currentUser.weightLog && currentUser.weightLog[urlize(props.text)]) currentWeight = '20'
 
     const navigateToExercise = () => {
         history.push({
@@ -41,29 +47,35 @@ const ExerciseCard = (props) => {
         <>
             <CCol xs="12" sm="6" md="4">
                 <CFade in={showCard}>
-                    <CCard>
+                    <CCard color="info" className="text-white">
                         <CCardHeader>
-                            {capitalize(props.text)}
+                            {typeof props.searchTerm === 'string' ? <Highlighter
+                                highlightClassName="searchHighlight"
+                                searchWords={[props.searchTerm]}
+                                autoEscape={true}
+                                textToHighlight={capitalize(props.text)}
+                            /> : capitalize(props.text)}
                             <div className="card-header-actions">
                                 <CLink className="card-header-action">
-                                    <CIcon name="cil-settings" />
+                                    {/* <CIcon name="cil-settings" /> */}
+                                    <p>{currentWeight}</p>
                                 </CLink>
-                                <CLink className="card-header-action" onClick={() => setCollapsed(!collapsed)}>
-                                    <CIcon name={collapsed ? 'cil-chevron-bottom' : 'cil-chevron-top'} />
-                                </CLink>
-                                <CLink className="card-header-action" onClick={() => setShowCard(false)}>
+                                {/* <CLink className="card-header-action" onClick={() => setCollapsed(!collapsed)}>
+                                    <CIcon className="text-white" name={collapsed ? 'cil-chevron-top' : 'cil-chevron-bottom'} />
+                                </CLink> */}
+                                {/* <CLink className="card-header-action" onClick={() => setShowCard(false)}>
                                     <CIcon name="cil-x-circle" />
-                                </CLink>
+                                </CLink> */}
                             </div>
                         </CCardHeader>
-                        <CCollapse show={collapsed}>
+                        {/* <CCollapse show={collapsed}>
                             <CCardBody>
                                 <StyledCard>
                                     <p className='nextto'>Workout</p>
                                     <CButton className='nextto' block color="primary" onClick={() => navigateToExercise()}>View</CButton>
                                 </StyledCard>
                             </CCardBody>
-                        </CCollapse>
+                        </CCollapse> */}
                     </CCard>
                 </CFade>
             </CCol>

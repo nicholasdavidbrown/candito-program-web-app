@@ -44,6 +44,7 @@ const Inputs = React.lazy(() => import('./views/powerbuilder/InputForm'));
 const Progress = React.lazy(() => import('./views/powerbuilder/Progress'));
 const MyWeights = React.lazy(() => import('./views/powerbuilder/MyWeights'));
 const WeightLog = React.lazy(() => import('./views/powerbuilder/WeightLog'));
+const AddExercisePage = React.lazy(() => import('./views/powerbuilder/AddExercisePage'));
 // const Forecast = React.lazy(() => import('./views/powerbuilder/MyWeights'));
 // const CoreUIIcons = React.lazy(() => import('./views/icons/coreui-icons/CoreUIIcons'));
 // const Flags = React.lazy(() => import('./views/icons/flags/Flags'));
@@ -64,6 +65,7 @@ const routes = [
   { path: '/inputs', name: 'Inputs', component: Inputs },
   { path: '/progress', name: 'Progress', component: Progress },
   { path: '/weights', name: 'Weights', component: MyWeights },
+  { path: '/addex', name: 'Add Exercise', component: AddExercisePage },
   // { path: '/forecast', name: 'Forecast', component: MyWeights },
   { path: '/users/:id', exact: true, name: 'Weight Log', component: WeightLog }
   // { path: '/theme', name: 'Theme', component: Colors, exact: true },

@@ -31,6 +31,10 @@
         display: block;
 }
 
+.searchHighlight {
+    background-color: rgba(211, 185, 35, 0.603);
+}
+
 .custom-color1 {
 
     p {
@@ -52,6 +56,10 @@
 
 .no-pb-0 {
     padding-bottom: 1.25rem !important;
+}
+
+.margin-bot-0 {
+    margin-bottom: 0;
 }
 
 .invis-bg {

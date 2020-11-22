@@ -24,4 +24,4 @@ function boldString(str, substr) {
     return str.replace(strRegExp, '<b>' + substr + '</b>');
 }
 
-export { capitalize, urlize, unUrlize, boldString }
+module.exports = { capitalize, urlize, unUrlize, boldString }
